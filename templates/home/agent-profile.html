@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}
-    Главная
+Главная
 {% endblock title %}
 
 
@@ -11,7 +11,7 @@
 ============================================ -->
 <section id="page-title" class="page-title bg-overlay bg-overlay-dark2">
     <div class="bg-section">
-        <img src="assets/images/page-titles/1.jpg" alt="Background" />
+        <img src="{% static 'images/page-titles/1.jpg' %}" alt="Background"/>
     </div>
     <div class="container">
         <div class="row">
@@ -46,7 +46,7 @@
         <div class="row">
             <div class="col-xs-12 col-sm-5 col-md-5">
                 <div class="agent--profile-img">
-                    <img src="assets/images/agents/single/1.jpg" alt="agent" />
+                    <img src="{% static 'images/agents/single/1.jpg' %}" alt="agent"/>
                 </div>
             </div>
             <!-- .col-md-5 end -->
@@ -58,7 +58,8 @@
                     </div>
                     <!-- .agent-info end -->
                     <div class="agent--profile-details">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercit.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercit.</p>
                     </div>
                     <!-- .agent-profile-details end -->
                     <div class="agent--profile-contact">
@@ -106,15 +107,17 @@
         <!-- .row end -->
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="carousel carousel-dots" data-slide="3" data-slide-rs="2" data-autoplay="false" data-nav="false" data-dots="true" data-space="25" data-loop="true" data-speed="800">
+                <div class="carousel carousel-dots" data-slide="3" data-slide-rs="2" data-autoplay="false"
+                     data-nav="false" data-dots="true" data-space="25" data-loop="true" data-speed="800">
 
                     <!-- .property-item #1 -->
                     <div class="property-item">
                         <div class="property--img">
                             <a href="#">
-                            <img src="assets/images/properties/1.jpg" alt="property image" class="img-responsive">
-                            <span class="property--status">For Sale</span>
-</a>
+                                <img src="{% static 'images/properties/1.jpg' %}" alt="property image"
+                                     class="img-responsive">
+                                <span class="property--status">For Sale</span>
+                            </a>
                         </div>
                         <div class="property--content">
                             <div class="property--info">
@@ -127,7 +130,8 @@
                                 <ul class="list-unstyled mb-0">
                                     <li><span class="feature">Beds:</span><span class="feature-num">2</span></li>
                                     <li><span class="feature">Baths:</span><span class="feature-num">2</span></li>
-                                    <li><span class="feature">Area:</span><span class="feature-num">587 sq ft</span></li>
+                                    <li><span class="feature">Area:</span><span class="feature-num">587 sq ft</span>
+                                    </li>
                                 </ul>
                             </div>
                             <!-- .property-features end -->
@@ -139,9 +143,10 @@
                     <div class="property-item">
                         <div class="property--img">
                             <a href="#">
-                            <img src="assets/images/properties/2.jpg" alt="property image" class="img-responsive">
-                            <span class="property--status">For Rent</span>
-</a>
+                                <img src="{% static 'images/properties/2.jpg' %}" alt="property image"
+                                     class="img-responsive">
+                                <span class="property--status">For Rent</span>
+                            </a>
                         </div>
                         <div class="property--content">
                             <div class="property--info">
@@ -154,7 +159,8 @@
                                 <ul class="list-unstyled mb-0">
                                     <li><span class="feature">Beds:</span><span class="feature-num">4</span></li>
                                     <li><span class="feature">Baths:</span><span class="feature-num">3</span></li>
-                                    <li><span class="feature">Area:</span><span class="feature-num">800 sq ft</span></li>
+                                    <li><span class="feature">Area:</span><span class="feature-num">800 sq ft</span>
+                                    </li>
                                 </ul>
                             </div>
                             <!-- .property-features end -->
@@ -166,9 +172,10 @@
                     <div class="property-item">
                         <div class="property--img">
                             <a href="#">
-                            <img src="assets/images/properties/3.jpg" alt="property image" class="img-responsive">
-                            <span class="property--status">For Sale</span>
-</a>
+                                <img src="{% static 'images/properties/3.jpg' %}" alt="property image"
+                                     class="img-responsive">
+                                <span class="property--status">For Sale</span>
+                            </a>
                         </div>
                         <div class="property--content">
                             <div class="property--info">
@@ -181,7 +188,8 @@
                                 <ul class="list-unstyled mb-0">
                                     <li><span class="feature">Beds:</span><span class="feature-num">2</span></li>
                                     <li><span class="feature">Baths:</span><span class="feature-num">1</span></li>
-                                    <li><span class="feature">Area:</span><span class="feature-num">200 sq ft</span></li>
+                                    <li><span class="feature">Area:</span><span class="feature-num">200 sq ft</span>
+                                    </li>
                                 </ul>
                             </div>
                             <!-- .property-features end -->
@@ -193,9 +201,10 @@
                     <div class="property-item">
                         <div class="property--img">
                             <a href="#">
-                            <img src="assets/images/properties/1.jpg" alt="property image" class="img-responsive">
-                            <span class="property--status">For Sale</span>
-</a>
+                                <img src="{% static 'images/properties/1.jpg' %}" alt="property image"
+                                     class="img-responsive">
+                                <span class="property--status">For Sale</span>
+                            </a>
                         </div>
                         <div class="property--content">
                             <div class="property--info">
@@ -208,7 +217,8 @@
                                 <ul class="list-unstyled mb-0">
                                     <li><span class="feature">Beds:</span><span class="feature-num">2</span></li>
                                     <li><span class="feature">Baths:</span><span class="feature-num">2</span></li>
-                                    <li><span class="feature">Area:</span><span class="feature-num">587 sq ft</span></li>
+                                    <li><span class="feature">Area:</span><span class="feature-num">587 sq ft</span>
+                                    </li>
                                 </ul>
                             </div>
                             <!-- .property-features end -->
@@ -220,9 +230,10 @@
                     <div class="property-item">
                         <div class="property--img">
                             <a href="#">
-                            <img src="assets/images/properties/2.jpg" alt="property image" class="img-responsive">
-                            <span class="property--status">For Rent</span>
-</a>
+                                <img src="{% static 'images/properties/2.jpg' %}" alt="property image"
+                                     class="img-responsive">
+                                <span class="property--status">For Rent</span>
+                            </a>
                         </div>
                         <div class="property--content">
                             <div class="property--info">
@@ -235,7 +246,8 @@
                                 <ul class="list-unstyled mb-0">
                                     <li><span class="feature">Beds:</span><span class="feature-num">4</span></li>
                                     <li><span class="feature">Baths:</span><span class="feature-num">3</span></li>
-                                    <li><span class="feature">Area:</span><span class="feature-num">800 sq ft</span></li>
+                                    <li><span class="feature">Area:</span><span class="feature-num">800 sq ft</span>
+                                    </li>
                                 </ul>
                             </div>
                             <!-- .property-features end -->
@@ -247,9 +259,10 @@
                     <div class="property-item">
                         <div class="property--img">
                             <a href="#">
-                            <img src="assets/images/properties/3.jpg" alt="property image" class="img-responsive">
-                            <span class="property--status">For Sale</span>
-</a>
+                                <img src="{% static 'images/properties/3.jpg' %}" alt="property image"
+                                     class="img-responsive">
+                                <span class="property--status">For Sale</span>
+                            </a>
                         </div>
                         <div class="property--content">
                             <div class="property--info">
@@ -262,7 +275,8 @@
                                 <ul class="list-unstyled mb-0">
                                     <li><span class="feature">Beds:</span><span class="feature-num">2</span></li>
                                     <li><span class="feature">Baths:</span><span class="feature-num">1</span></li>
-                                    <li><span class="feature">Area:</span><span class="feature-num">200 sq ft</span></li>
+                                    <li><span class="feature">Area:</span><span class="feature-num">200 sq ft</span>
+                                    </li>
                                 </ul>
                             </div>
                             <!-- .property-features end -->
@@ -308,21 +322,24 @@
                         <div class="col-xs-12 col-sm-12 col-md-4">
                             <div class="form-group">
                                 <label for="contact-email">Email Address*</label>
-                                <input type="email" class="form-control" name="contact-email" id="contact-email" required>
+                                <input type="email" class="form-control" name="contact-email" id="contact-email"
+                                       required>
                             </div>
                         </div>
                         <!-- .col-md-4 end -->
                         <div class="col-xs-12 col-sm-12 col-md-4">
                             <div class="form-group">
                                 <label for="phone-number">Phone Number</label>
-                                <input type="text" class="form-control" name="phone-number" id="phone-number" placeholder="(optional)">
+                                <input type="text" class="form-control" name="phone-number" id="phone-number"
+                                       placeholder="(optional)">
                             </div>
                         </div>
                         <!-- .col-md-4 end -->
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                                 <label for="message">Message*</label>
-                                <textarea class="form-control" name="contact-message" id="message" rows="2" required></textarea>
+                                <textarea class="form-control" name="contact-message" id="message" rows="2"
+                                          required></textarea>
                             </div>
                         </div>
                         <!-- .col-md-12 end -->
@@ -343,7 +360,7 @@
 <!-- cta #1
 ============================================= -->
 <section id="cta" class="cta cta-1 text-center bg-overlay bg-overlay-dark pt-90">
-    <div class="bg-section"><img src="assets/images/cta/bg-1.jpg" alt="Background"></div>
+    <div class="bg-section"><img src="{% static 'images/cta/bg-1.jpg' %}" alt="Background"></div>
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
