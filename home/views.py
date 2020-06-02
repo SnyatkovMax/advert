@@ -48,9 +48,9 @@ def blog_single(request):
 
 
 def user_profile(request):
-    return render(request, 'home/user-profile.html')
+    return render(request, 'accounts/user-profile.html')
 def social_profile(request):
-    return render(request, 'home/social-profile.html')
+    return render(request, 'accounts/social-profile.html')
 def my_properties(request):
     return render(request, 'home/my-properties.html')
 def favourite_properties(request):
