@@ -85,7 +85,7 @@ html {
 }
 
 body {
-	background-color: #f2f7ff;
+	background-color: #f2f7f9;
 	font-family: 'Poppins', sans-serif;
 	font-size: 14px;
 	font-weight: 400;
@@ -95,7 +95,8 @@ body {
 }
 
 .wrapper {
-	background-color: #f2f7ff;
+	background-color: #778899;
+	
 }
 
 * {
@@ -8734,7 +8735,7 @@ ul.comments-list ul.comment-children {
 }
 
 .page-title .title {
-	padding: 235px 0 175px;
+	padding: 35px 0 75px;
 }
 
 .page-title .title--heading {
