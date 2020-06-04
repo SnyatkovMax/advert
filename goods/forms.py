@@ -9,7 +9,3 @@ class PostForm(forms.ModelForm):
                   'size', 'photoURL', 'videoURL', 'photo', 'address', 'city', 'country')
 
 
-# class PostForm2(forms.ModelForm):
-#     class Meta:
-#         model = Post
-#         fields = ('title', 'about', 'content', 'author', 'source')

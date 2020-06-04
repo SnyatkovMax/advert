@@ -45,7 +45,9 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
 
-                <form class="mb-0">
+                <form class="mb-0" method="post" action="/home/add-property" enctype="multipart/form-data">
+                    {% csrf_token %}
+
                     <div class="form-box">
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12">
@@ -133,47 +135,49 @@
                             <div class="col-xs-12 col-sm-4 col-md-4">
                                 <div class="form-group">
                                     <label for="area">Area</label>
-                                    <input type="text" class="form-control" name="area" id="area" placeholder="sq ft">
+                                    <input type="text" class="form-control" name="area" id="area"
+                                           placeholder="sq ft">
                                 </div>
                             </div>
                             <!-- .col-md-4 end -->
                             <div class="col-xs-12 col-sm-4 col-md-4">
                                 <div class="form-group">
                                     <label for="size">Size</label>
-                                    <input type="text" class="form-control" name="size" id="size" placeholder="sq ft">
+                                    <input type="text" class="form-control" name="size" id="size"
+                                           placeholder="sq ft">
                                 </div>
                             </div>
                             <!-- .col-md-4 end -->
-<!--                        <div class="col-xs-12 col-sm-4 col-md-4">-->
-<!--                                <div class="form-group">-->
-<!--                                    <label for="Sale-Rent-Price">Sale or Rent Price*</label>-->
-<!--                                    <input type="text" class="form-control" name="Sale-Rent-Price" id="Sale-Rent-Price"-->
-<!--                                           required>-->
-<!--                                </div>-->
-<!--                            </div>-->
+                            <!--                        <div class="col-xs-12 col-sm-4 col-md-4">-->
+                            <!--                                <div class="form-group">-->
+                            <!--                                    <label for="Sale-Rent-Price">Sale or Rent Price*</label>-->
+                            <!--                                    <input type="text" class="form-control" name="Sale-Rent-Price" id="Sale-Rent-Price"-->
+                            <!--                                           required>-->
+                            <!--                                </div>-->
+                            <!--                            </div>-->
                             <!-- .col-md-4 end -->
-<!--                        <div class="col-xs-12 col-sm-4 col-md-4">-->
-<!--                                <div class="form-group">-->
-<!--                                    <label for="Before-Price-Label">Before Price Label</label>-->
-<!--                                    <input type="text" class="form-control" name="Before-Price-Label"-->
-<!--                                           id="Before-Price-Label" placeholder="ex: start from">-->
-<!--                                </div>-->
-<!--                            </div> -->
+                            <!--                        <div class="col-xs-12 col-sm-4 col-md-4">-->
+                            <!--                                <div class="form-group">-->
+                            <!--                                    <label for="Before-Price-Label">Before Price Label</label>-->
+                            <!--                                    <input type="text" class="form-control" name="Before-Price-Label"-->
+                            <!--                                           id="Before-Price-Label" placeholder="ex: start from">-->
+                            <!--                                </div>-->
+                            <!--                            </div> -->
                             <!-- .col-md-4 end -->
-<!--                        <div class="col-xs-12 col-sm-4 col-md-4">-->
-<!--                                <div class="form-group">-->
-<!--                                    <label for="After-Price-Label">After Price Label</label>-->
-<!--                                    <input type="text" class="form-control" name="After-Price-Label"-->
-<!--                                           id="After-Price-Label" placeholder="ex: monthly">-->
-<!--                                </div>-->
-<!--                            </div> -->
+                            <!--                        <div class="col-xs-12 col-sm-4 col-md-4">-->
+                            <!--                                <div class="form-group">-->
+                            <!--                                    <label for="After-Price-Label">After Price Label</label>-->
+                            <!--                                    <input type="text" class="form-control" name="After-Price-Label"-->
+                            <!--                                           id="After-Price-Label" placeholder="ex: monthly">-->
+                            <!--                                </div>-->
+                            <!--                            </div> -->
                             <!-- .col-md-4 end -->
-<!--                        <div class="col-xs-12 col-sm-4 col-md-4">-->
-<!--                                <div class="form-group">-->
-<!--                                    <label for="Property-ID">Property ID*</label>-->
-<!--                                    <input type="text" class="form-control" name="Property-ID" id="Property-ID">-->
-<!--                                </div>-->
-<!--                            </div>-->
+                            <!--                        <div class="col-xs-12 col-sm-4 col-md-4">-->
+                            <!--                                <div class="form-group">-->
+                            <!--                                    <label for="Property-ID">Property ID*</label>-->
+                            <!--                                    <input type="text" class="form-control" name="Property-ID" id="Property-ID">-->
+                            <!--                                </div>-->
+                            <!--                            </div>-->
                             <!-- .col-md-4 end -->
                             <div class="col-xs-12 col-sm-4 col-md-4">
                                 <div class="form-group">
@@ -195,175 +199,175 @@
                         <!-- .row end -->
                     </div>
                     <!-- .form-box end -->
-<!--                    <div class="form-box">-->
-<!--                        <div class="row">-->
-<!--                            <div class="col-xs-12 col-sm-12 col-md-12">-->
-<!--                                <h4 class="form&#45;&#45;title">Property Features</h4>-->
-<!--                            </div>-->
-<!--                            &lt;!&ndash; .col-md-12 end &ndash;&gt;-->
-<!--                            <div class="col-xs-12 col-sm-6 col-md-3">-->
-<!--                                <div class="input-checkbox">-->
-<!--                                    <label class="label-checkbox">-->
-<!--                                        <span>Center Cooling</span>-->
-<!--                                        <input type="checkbox">-->
-<!--                                        <span class="check-indicator"></span>-->
-<!--                                    </label>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            &lt;!&ndash; .col-md-3 end &ndash;&gt;-->
-<!--                            <div class="col-xs-12 col-sm-6 col-md-3">-->
-<!--                                <div class="input-checkbox">-->
-<!--                                    <label class="label-checkbox">-->
-<!--                                        <span>Balcony</span>-->
-<!--                                        <input type="checkbox">-->
-<!--                                        <span class="check-indicator"></span>-->
-<!--                                    </label>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            &lt;!&ndash; .col-md-3 end &ndash;&gt;-->
-<!--                            <div class="col-xs-12 col-sm-6 col-md-3">-->
-<!--                                <div class="input-checkbox">-->
-<!--                                    <label class="label-checkbox">-->
-<!--                                        <span>Pet Friendly</span>-->
-<!--                                        <input type="checkbox">-->
-<!--                                        <span class="check-indicator"></span>-->
-<!--                                    </label>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            &lt;!&ndash; .col-md-3 end &ndash;&gt;-->
-<!--                            <div class="col-xs-12 col-sm-6 col-md-3">-->
-<!--                                <div class="input-checkbox">-->
-<!--                                    <label class="label-checkbox">-->
-<!--                                        <span>Barbeque</span>-->
-<!--                                        <input type="checkbox">-->
-<!--                                        <span class="check-indicator"></span>-->
-<!--                                    </label>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            &lt;!&ndash; .col-md-3 end &ndash;&gt;-->
-<!--                            <div class="col-xs-12 col-sm-6 col-md-3">-->
-<!--                                <div class="input-checkbox">-->
-<!--                                    <label class="label-checkbox">-->
-<!--                                        <span>Fire Alarm</span>-->
-<!--                                        <input type="checkbox">-->
-<!--                                        <span class="check-indicator"></span>-->
-<!--                                    </label>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            &lt;!&ndash; .col-md-3 end &ndash;&gt;-->
-<!--                            <div class="col-xs-12 col-sm-6 col-md-3">-->
-<!--                                <div class="input-checkbox">-->
-<!--                                    <label class="label-checkbox">-->
-<!--                                        <span>Modern Kitchen</span>-->
-<!--                                        <input type="checkbox">-->
-<!--                                        <span class="check-indicator"></span>-->
-<!--                                    </label>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            &lt;!&ndash; .col-md-3 end &ndash;&gt;-->
-<!--                            <div class="col-xs-12 col-sm-6 col-md-3">-->
-<!--                                <div class="input-checkbox">-->
-<!--                                    <label class="label-checkbox">-->
-<!--                                        <span>Storage</span>-->
-<!--                                        <input type="checkbox">-->
-<!--                                        <span class="check-indicator"></span>-->
-<!--                                    </label>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            &lt;!&ndash; .col-md-3 end &ndash;&gt;-->
-<!--                            <div class="col-xs-12 col-sm-6 col-md-3">-->
-<!--                                <div class="input-checkbox">-->
-<!--                                    <label class="label-checkbox">-->
-<!--                                        <span>Dryer</span>-->
-<!--                                        <input type="checkbox">-->
-<!--                                        <span class="check-indicator"></span>-->
-<!--                                    </label>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            &lt;!&ndash; .col-md-3 end &ndash;&gt;-->
-<!--                            <div class="col-xs-12 col-sm-6 col-md-3">-->
-<!--                                <div class="input-checkbox">-->
-<!--                                    <label class="label-checkbox">-->
-<!--                                        <span>Heating</span>-->
-<!--                                        <input type="checkbox">-->
-<!--                                        <span class="check-indicator"></span>-->
-<!--                                    </label>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            &lt;!&ndash; .col-md-3 end &ndash;&gt;-->
-<!--                            <div class="col-xs-12 col-sm-6 col-md-3">-->
-<!--                                <div class="input-checkbox">-->
-<!--                                    <label class="label-checkbox">-->
-<!--                                        <span>Pool</span>-->
-<!--                                        <input type="checkbox">-->
-<!--                                        <span class="check-indicator"></span>-->
-<!--                                    </label>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            &lt;!&ndash; .col-md-3 end &ndash;&gt;-->
-<!--                            <div class="col-xs-12 col-sm-6 col-md-3">-->
-<!--                                <div class="input-checkbox">-->
-<!--                                    <label class="label-checkbox">-->
-<!--                                        <span>Laundry</span>-->
-<!--                                        <input type="checkbox">-->
-<!--                                        <span class="check-indicator"></span>-->
-<!--                                    </label>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            &lt;!&ndash; .col-md-3 end &ndash;&gt;-->
-<!--                            <div class="col-xs-12 col-sm-6 col-md-3">-->
-<!--                                <div class="input-checkbox">-->
-<!--                                    <label class="label-checkbox">-->
-<!--                                        <span>Sauna</span>-->
-<!--                                        <input type="checkbox">-->
-<!--                                        <span class="check-indicator"></span>-->
-<!--                                    </label>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            &lt;!&ndash; .col-md-3 end &ndash;&gt;-->
-<!--                            <div class="col-xs-12 col-sm-6 col-md-3">-->
-<!--                                <div class="input-checkbox">-->
-<!--                                    <label class="label-checkbox">-->
-<!--                                        <span>Gym</span>-->
-<!--                                        <input type="checkbox">-->
-<!--                                        <span class="check-indicator"></span>-->
-<!--                                    </label>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            &lt;!&ndash; .col-md-3 end &ndash;&gt;-->
-<!--                            <div class="col-xs-12 col-sm-6 col-md-3">-->
-<!--                                <div class="input-checkbox">-->
-<!--                                    <label class="label-checkbox">-->
-<!--                                        <span>Elevator</span>-->
-<!--                                        <input type="checkbox">-->
-<!--                                        <span class="check-indicator"></span>-->
-<!--                                    </label>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            &lt;!&ndash; .col-md-3 end &ndash;&gt;-->
-<!--                            <div class="col-xs-12 col-sm-6 col-md-3">-->
-<!--                                <div class="input-checkbox">-->
-<!--                                    <label class="label-checkbox">-->
-<!--                                        <span>Dish Washer</span>-->
-<!--                                        <input type="checkbox">-->
-<!--                                        <span class="check-indicator"></span>-->
-<!--                                    </label>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            &lt;!&ndash; .col-md-3 end &ndash;&gt;-->
-<!--                            <div class="col-xs-12 col-sm-6 col-md-3">-->
-<!--                                <div class="input-checkbox">-->
-<!--                                    <label class="label-checkbox">-->
-<!--                                        <span>Emergency Exit</span>-->
-<!--                                        <input type="checkbox">-->
-<!--                                        <span class="check-indicator"></span>-->
-<!--                                    </label>-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            &lt;!&ndash; .col-md-3 end &ndash;&gt;-->
-<!--                        </div>-->
-<!--                        &lt;!&ndash; .row end &ndash;&gt;-->
-<!--                    </div>-->
+                    <!--                    <div class="form-box">-->
+                    <!--                        <div class="row">-->
+                    <!--                            <div class="col-xs-12 col-sm-12 col-md-12">-->
+                    <!--                                <h4 class="form&#45;&#45;title">Property Features</h4>-->
+                    <!--                            </div>-->
+                    <!--                            &lt;!&ndash; .col-md-12 end &ndash;&gt;-->
+                    <!--                            <div class="col-xs-12 col-sm-6 col-md-3">-->
+                    <!--                                <div class="input-checkbox">-->
+                    <!--                                    <label class="label-checkbox">-->
+                    <!--                                        <span>Center Cooling</span>-->
+                    <!--                                        <input type="checkbox">-->
+                    <!--                                        <span class="check-indicator"></span>-->
+                    <!--                                    </label>-->
+                    <!--                                </div>-->
+                    <!--                            </div>-->
+                    <!--                            &lt;!&ndash; .col-md-3 end &ndash;&gt;-->
+                    <!--                            <div class="col-xs-12 col-sm-6 col-md-3">-->
+                    <!--                                <div class="input-checkbox">-->
+                    <!--                                    <label class="label-checkbox">-->
+                    <!--                                        <span>Balcony</span>-->
+                    <!--                                        <input type="checkbox">-->
+                    <!--                                        <span class="check-indicator"></span>-->
+                    <!--                                    </label>-->
+                    <!--                                </div>-->
+                    <!--                            </div>-->
+                    <!--                            &lt;!&ndash; .col-md-3 end &ndash;&gt;-->
+                    <!--                            <div class="col-xs-12 col-sm-6 col-md-3">-->
+                    <!--                                <div class="input-checkbox">-->
+                    <!--                                    <label class="label-checkbox">-->
+                    <!--                                        <span>Pet Friendly</span>-->
+                    <!--                                        <input type="checkbox">-->
+                    <!--                                        <span class="check-indicator"></span>-->
+                    <!--                                    </label>-->
+                    <!--                                </div>-->
+                    <!--                            </div>-->
+                    <!--                            &lt;!&ndash; .col-md-3 end &ndash;&gt;-->
+                    <!--                            <div class="col-xs-12 col-sm-6 col-md-3">-->
+                    <!--                                <div class="input-checkbox">-->
+                    <!--                                    <label class="label-checkbox">-->
+                    <!--                                        <span>Barbeque</span>-->
+                    <!--                                        <input type="checkbox">-->
+                    <!--                                        <span class="check-indicator"></span>-->
+                    <!--                                    </label>-->
+                    <!--                                </div>-->
+                    <!--                            </div>-->
+                    <!--                            &lt;!&ndash; .col-md-3 end &ndash;&gt;-->
+                    <!--                            <div class="col-xs-12 col-sm-6 col-md-3">-->
+                    <!--                                <div class="input-checkbox">-->
+                    <!--                                    <label class="label-checkbox">-->
+                    <!--                                        <span>Fire Alarm</span>-->
+                    <!--                                        <input type="checkbox">-->
+                    <!--                                        <span class="check-indicator"></span>-->
+                    <!--                                    </label>-->
+                    <!--                                </div>-->
+                    <!--                            </div>-->
+                    <!--                            &lt;!&ndash; .col-md-3 end &ndash;&gt;-->
+                    <!--                            <div class="col-xs-12 col-sm-6 col-md-3">-->
+                    <!--                                <div class="input-checkbox">-->
+                    <!--                                    <label class="label-checkbox">-->
+                    <!--                                        <span>Modern Kitchen</span>-->
+                    <!--                                        <input type="checkbox">-->
+                    <!--                                        <span class="check-indicator"></span>-->
+                    <!--                                    </label>-->
+                    <!--                                </div>-->
+                    <!--                            </div>-->
+                    <!--                            &lt;!&ndash; .col-md-3 end &ndash;&gt;-->
+                    <!--                            <div class="col-xs-12 col-sm-6 col-md-3">-->
+                    <!--                                <div class="input-checkbox">-->
+                    <!--                                    <label class="label-checkbox">-->
+                    <!--                                        <span>Storage</span>-->
+                    <!--                                        <input type="checkbox">-->
+                    <!--                                        <span class="check-indicator"></span>-->
+                    <!--                                    </label>-->
+                    <!--                                </div>-->
+                    <!--                            </div>-->
+                    <!--                            &lt;!&ndash; .col-md-3 end &ndash;&gt;-->
+                    <!--                            <div class="col-xs-12 col-sm-6 col-md-3">-->
+                    <!--                                <div class="input-checkbox">-->
+                    <!--                                    <label class="label-checkbox">-->
+                    <!--                                        <span>Dryer</span>-->
+                    <!--                                        <input type="checkbox">-->
+                    <!--                                        <span class="check-indicator"></span>-->
+                    <!--                                    </label>-->
+                    <!--                                </div>-->
+                    <!--                            </div>-->
+                    <!--                            &lt;!&ndash; .col-md-3 end &ndash;&gt;-->
+                    <!--                            <div class="col-xs-12 col-sm-6 col-md-3">-->
+                    <!--                                <div class="input-checkbox">-->
+                    <!--                                    <label class="label-checkbox">-->
+                    <!--                                        <span>Heating</span>-->
+                    <!--                                        <input type="checkbox">-->
+                    <!--                                        <span class="check-indicator"></span>-->
+                    <!--                                    </label>-->
+                    <!--                                </div>-->
+                    <!--                            </div>-->
+                    <!--                            &lt;!&ndash; .col-md-3 end &ndash;&gt;-->
+                    <!--                            <div class="col-xs-12 col-sm-6 col-md-3">-->
+                    <!--                                <div class="input-checkbox">-->
+                    <!--                                    <label class="label-checkbox">-->
+                    <!--                                        <span>Pool</span>-->
+                    <!--                                        <input type="checkbox">-->
+                    <!--                                        <span class="check-indicator"></span>-->
+                    <!--                                    </label>-->
+                    <!--                                </div>-->
+                    <!--                            </div>-->
+                    <!--                            &lt;!&ndash; .col-md-3 end &ndash;&gt;-->
+                    <!--                            <div class="col-xs-12 col-sm-6 col-md-3">-->
+                    <!--                                <div class="input-checkbox">-->
+                    <!--                                    <label class="label-checkbox">-->
+                    <!--                                        <span>Laundry</span>-->
+                    <!--                                        <input type="checkbox">-->
+                    <!--                                        <span class="check-indicator"></span>-->
+                    <!--                                    </label>-->
+                    <!--                                </div>-->
+                    <!--                            </div>-->
+                    <!--                            &lt;!&ndash; .col-md-3 end &ndash;&gt;-->
+                    <!--                            <div class="col-xs-12 col-sm-6 col-md-3">-->
+                    <!--                                <div class="input-checkbox">-->
+                    <!--                                    <label class="label-checkbox">-->
+                    <!--                                        <span>Sauna</span>-->
+                    <!--                                        <input type="checkbox">-->
+                    <!--                                        <span class="check-indicator"></span>-->
+                    <!--                                    </label>-->
+                    <!--                                </div>-->
+                    <!--                            </div>-->
+                    <!--                            &lt;!&ndash; .col-md-3 end &ndash;&gt;-->
+                    <!--                            <div class="col-xs-12 col-sm-6 col-md-3">-->
+                    <!--                                <div class="input-checkbox">-->
+                    <!--                                    <label class="label-checkbox">-->
+                    <!--                                        <span>Gym</span>-->
+                    <!--                                        <input type="checkbox">-->
+                    <!--                                        <span class="check-indicator"></span>-->
+                    <!--                                    </label>-->
+                    <!--                                </div>-->
+                    <!--                            </div>-->
+                    <!--                            &lt;!&ndash; .col-md-3 end &ndash;&gt;-->
+                    <!--                            <div class="col-xs-12 col-sm-6 col-md-3">-->
+                    <!--                                <div class="input-checkbox">-->
+                    <!--                                    <label class="label-checkbox">-->
+                    <!--                                        <span>Elevator</span>-->
+                    <!--                                        <input type="checkbox">-->
+                    <!--                                        <span class="check-indicator"></span>-->
+                    <!--                                    </label>-->
+                    <!--                                </div>-->
+                    <!--                            </div>-->
+                    <!--                            &lt;!&ndash; .col-md-3 end &ndash;&gt;-->
+                    <!--                            <div class="col-xs-12 col-sm-6 col-md-3">-->
+                    <!--                                <div class="input-checkbox">-->
+                    <!--                                    <label class="label-checkbox">-->
+                    <!--                                        <span>Dish Washer</span>-->
+                    <!--                                        <input type="checkbox">-->
+                    <!--                                        <span class="check-indicator"></span>-->
+                    <!--                                    </label>-->
+                    <!--                                </div>-->
+                    <!--                            </div>-->
+                    <!--                            &lt;!&ndash; .col-md-3 end &ndash;&gt;-->
+                    <!--                            <div class="col-xs-12 col-sm-6 col-md-3">-->
+                    <!--                                <div class="input-checkbox">-->
+                    <!--                                    <label class="label-checkbox">-->
+                    <!--                                        <span>Emergency Exit</span>-->
+                    <!--                                        <input type="checkbox">-->
+                    <!--                                        <span class="check-indicator"></span>-->
+                    <!--                                    </label>-->
+                    <!--                                </div>-->
+                    <!--                            </div>-->
+                    <!--                            &lt;!&ndash; .col-md-3 end &ndash;&gt;-->
+                    <!--                        </div>-->
+                    <!--                        &lt;!&ndash; .row end &ndash;&gt;-->
+                    <!--                    </div>-->
                     <!-- .form-box end -->
 
                     <div class="form-box">
@@ -380,7 +384,7 @@
                         </div>
                         <!-- .row end -->
                     </div>
-<!--                     form-box end-->
+                    <!--                     form-box end-->
 
                     <div class="form-box">
                         <div class="row">
@@ -416,35 +420,36 @@
                                 </div>
                             </div>
                             <!-- .col-md-4 end -->
-<!--                            <div class="col-xs-12 col-sm-4 col-md-4">-->
-<!--                                <div class="form-group">-->
-<!--                                    <label for="state">State</label>-->
-<!--                                    <input type="text" class="form-control" name="state" id="state">-->
-<!--                                </div>-->
-<!--                            </div>-->
+                            <!--                            <div class="col-xs-12 col-sm-4 col-md-4">-->
+                            <!--                                <div class="form-group">-->
+                            <!--                                    <label for="state">State</label>-->
+                            <!--                                    <input type="text" class="form-control" name="state" id="state">-->
+                            <!--                                </div>-->
+                            <!--                            </div>-->
                             <!-- .col-md-4 end -->
-<!--                            <div class="col-xs-12 col-sm-4 col-md-4">-->
-<!--                                <div class="form-group">-->
-<!--                                    <label for="Zip/Postal-code">Zip/Postal Code</label>-->
-<!--                                    <input type="text" class="form-control" name="Zip/Postal-code" id="Zip/Postal-code">-->
-<!--                                </div>-->
-<!--                            </div>-->
+                            <!--                            <div class="col-xs-12 col-sm-4 col-md-4">-->
+                            <!--                                <div class="form-group">-->
+                            <!--                                    <label for="Zip/Postal-code">Zip/Postal Code</label>-->
+                            <!--                                    <input type="text" class="form-control" name="Zip/Postal-code" id="Zip/Postal-code">-->
+                            <!--                                </div>-->
+                            <!--                            </div>-->
                             <!-- .col-md-4 end -->
-<!--                            <div class="col-xs-12 col-sm-4 col-md-4">-->
-<!--                                <div class="form-group">-->
-<!--                                    <label for="neighborhood">Neighborhood</label>-->
-<!--                                    <input type="text" class="form-control" name="neighborhood" id="neighborhood">-->
-<!--                                </div>-->
-<!--                            </div>-->
+                            <!--                            <div class="col-xs-12 col-sm-4 col-md-4">-->
+                            <!--                                <div class="form-group">-->
+                            <!--                                    <label for="neighborhood">Neighborhood</label>-->
+                            <!--                                    <input type="text" class="form-control" name="neighborhood" id="neighborhood">-->
+                            <!--                                </div>-->
+                            <!--                            </div>-->
                             <!-- .col-md-4 end -->
-<!--                            <div class="col-xs-12 col-sm-12 col-md-12">-->
-<!--                                <div id="googleMap" style="width:100%;height:380px;"></div>-->
-<!--                            </div>-->
+                            <!--                            <div class="col-xs-12 col-sm-12 col-md-12">-->
+                            <!--                                <div id="googleMap" style="width:100%;height:380px;"></div>-->
+                            <!--                            </div>-->
                             <!-- .col-md-12 end -->
                         </div>
                         <!-- .row end -->
                     </div>
                     <!-- .form-box end -->
+
                     <input type="submit" value="Save Edits" name="submit" class="btn btn--primary">
                 </form>
             </div>
