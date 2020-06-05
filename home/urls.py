@@ -29,7 +29,6 @@ urlpatterns = [
     path('blog-sidebar-left', blog_sidebar_left),
     path('blog-single', blog_single),
 
-
     path('user-profile', user_profile),
     path('social-profile', social_profile),
     path('my-properties', my_properties),
