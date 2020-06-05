@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, re_path
 from .views import *
 
 
@@ -37,7 +37,9 @@ urlpatterns = [
 
 
     path('properties-grid', properties_grid),
+
     path('properties-grid-split', properties_grid_split),
+
     path('#', properties_list),
     path('properties-list', properties_list),
     path('properties-list-split', properties_list_split),
@@ -47,9 +49,5 @@ urlpatterns = [
     path('page-contact', page_contact),
 
 
-
-
-
-
-
 ]
+# path('properties-grid-split', properties_grid_split),

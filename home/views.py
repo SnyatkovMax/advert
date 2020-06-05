@@ -1,4 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from goods.models import Post
+from django.core.paginator import Paginator
+
 
 
 def index(request):
@@ -62,8 +65,21 @@ def add_property(request):
 
 def properties_grid(request):
     return render(request, 'home/properties-grid.html')
+
 def properties_grid_split(request):
-    return render(request, 'home/properties-grid-split.html')
+
+    data = dict()
+    # data['user'] = 'temp_admin'  # Временный админ (до включения авторизации)
+    data['title'] = 'Listing'
+    all_post = Post.objects.all()
+    data['posts'] = all_post
+    paginator = Paginator(all_post, 10)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    data['page_obj'] = page_obj
+
+    return render(request, 'home/properties-grid-split.html', context=data)
+
 def properties_list(request):
     return render(request, 'home/properties-list.html')
 def properties_list_split(request):

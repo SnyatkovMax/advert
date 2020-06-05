@@ -162,7 +162,17 @@
                                 {% else %}
                                        <li> <a  href="/accounts/sign_out">Sign out</a></li>
                                        <li> <a  href="/accounts/user-profile">Profile</a></li>
+
                                 {% endif %}
+                                {%  if user.username == 'admin' or user.username == 'admin1'   %}
+
+                                    <li><a href="/goods/" >Galery-CRUD</a></li>
+
+                                    <li><a target="_blank" href="/admin/auth/" >User</a></li>
+                                    <li><a target="_blank" href="/admin/goods/" >Goods</a></li>
+                                {% endif %}
+
+
                             </ul>
                         </li>
                         <li><a  href="/accounts/sign_in" >
@@ -187,7 +197,7 @@
 
                     <!-- Module Consultation  -->
                     <div class="module module-property pull-left">
-                        <a href="add-property" target="_blank" class="btn"><i class="fa fa-plus"></i> add property</a>
+                        <a href="/goods/create" target="_blank" class="btn"><i class="fa fa-plus"></i> add property</a>
                     </div>
                 </div>
                 <!-- /.navbar-collapse -->

@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .forms import PostForm, PostForm2
+from .forms import PostForm, PostForm2, PostForm3
 from .models import Post
 from django.contrib.auth import logout
 from django.core.paginator import Paginator
@@ -53,27 +53,33 @@ def edit(request, post_id):
         # Блокировка доступа через адресную строку
         # =======================
         if request.user.username == 'admin' or request.user.username == 'admin1':
-            data['form'] = PostForm2(instance=post)
+            data['form'] = PostForm3(instance=post)
             data['post'] = post
             return render(request, 'goods/edit.html', context=data)
         else:
             logout(request)  # Блокировка доступа через адресную строку
             return redirect('/accounts/sign_in')
 
+    # fields = ('name', 'description', 'type', 'status', 'location', 'beds', 'baths', 'floors', 'metro', 'area',
+    #           'size', 'photoURL', 'videoURL', 'photo', 'address', 'city', 'country')
+
+    # 'floors', 'metro', 'area', 'size', 'photoURL', 'videoURL',)
 
     elif request.method == 'POST':
-        form2 = PostForm2(request.POST)
+        form2 = PostForm3(request.POST)
         # print('==', form2)
         if form2.is_valid():
             # post.photo = form2.cleaned_data['photo']
             post.name = form2.cleaned_data['name']
             post.description = form2.cleaned_data['description']
-            post.genre = form2.cleaned_data['genre']
-            post.media = form2.cleaned_data['media']
+            # post.genre = form2.cleaned_data['type']
             post.status = form2.cleaned_data['status']
-            post.weight = form2.cleaned_data['weight']
-            post.height = form2.cleaned_data['height']
-            post.buy_url = form2.cleaned_data['buy_url']
+            post.weight = form2.cleaned_data['floors']
+            post.height = form2.cleaned_data['metro']
+            post.buy_url = form2.cleaned_data['area']
+            post.buy_url = form2.cleaned_data['size']
+            post.buy_url = form2.cleaned_data['photoURL']
+            post.buy_url = form2.cleaned_data['videoURL']
 
             post.save()
             # update ?

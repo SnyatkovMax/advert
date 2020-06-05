@@ -9,7 +9,7 @@
 
    {% if user.username == 'admin' or user.username == 'admin1' %}
        <hr>
-            <a href="/goods/create" class="btn btn-primary btn-md smoothscroll">ADD artwork</a>
+            <a href="/goods/create" class="btn btn-primary btn-md smoothscroll">+ ADD Property</a>
        <p></p>
     {% endif %}
     <div class="pagination" style="margin-top: 20px">
@@ -33,12 +33,14 @@
             <th>Photo</th>
             <th>Name</th>
             <th>Description</th>
+            <th>Type</th>
             <th>Status</th>
-            <th>Media</th>
-            <th>Genre</th>
-            <th>height</th>
-            <th>weight</th>
-            <th>Buy URL</th>
+            <th>Location</th>
+            <th>Beds</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>Country</th>
+            <th>VideoURL</th>
 
             <th>Manage</th>
         </tr>
@@ -51,13 +53,15 @@
                 </td>
                 <td>{{ post.name }}</td>
                 <td>{{ post.description }}</td>
+                <td>{{ post.type }}</td>
                 <td>{{ post.status }}</td>
-                <td>{{ post.media }}</td>
-                <td>{{ post.genre }}</td>
-                <td>{{ post.height }}</td>
-                <td>{{ post.weight }}</td>
+                <td>{{ post.location }}</td>
+                <td>{{ post.beds }}</td>
+                <td>{{ post.address }}</td>
+                <td>{{ post.city }}</td>
+                <td>{{ post.country }}</td>
                 <td>
-                    <a href="{{ post.buy_url }}" target="_blank">{{ post.buy_url }}</a>
+                    <a href="{{ post.videoURL }}" target="_blank">videoURL</a>
                 </td>
                 <td>{% if user.username == 'admin' or user.username == 'admin1' %}
                     <a href="/goods/details/{{ post.id }}">Details</a>
