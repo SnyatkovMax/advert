@@ -58,8 +58,8 @@ def my_properties(request):
     return render(request, 'home/my-properties.html')
 def favourite_properties(request):
     return render(request, 'home/favourite-properties.html')
-def add_property(request):
-    return render(request, 'home/add-property.html')
+# def add_property(request):
+#     return render(request, 'home/add-property.html')
 
 
 

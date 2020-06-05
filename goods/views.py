@@ -10,7 +10,7 @@ def index(request):
     data['title'] = 'Listing'
     all_post = Post.objects.all()
     data['posts'] = all_post
-    paginator = Paginator(all_post, 10)
+    paginator = Paginator(all_post, 8)
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     data['page_obj'] = page_obj
@@ -74,12 +74,12 @@ def edit(request, post_id):
             post.description = form2.cleaned_data['description']
             # post.genre = form2.cleaned_data['type']
             post.status = form2.cleaned_data['status']
-            post.weight = form2.cleaned_data['floors']
-            post.height = form2.cleaned_data['metro']
-            post.buy_url = form2.cleaned_data['area']
-            post.buy_url = form2.cleaned_data['size']
-            post.buy_url = form2.cleaned_data['photoURL']
-            post.buy_url = form2.cleaned_data['videoURL']
+            post.floors = form2.cleaned_data['floors']
+            post.metro = form2.cleaned_data['metro']
+            post.area = form2.cleaned_data['area']
+            post.size = form2.cleaned_data['size']
+            post.photoURL = form2.cleaned_data['photoURL']
+            post.videoURL = form2.cleaned_data['videoURL']
 
             post.save()
             # update ?
