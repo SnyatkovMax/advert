@@ -33,7 +33,7 @@ urlpatterns = [
     path('social-profile', social_profile),
     path('my-properties', my_properties),
     path('favourite-properties', favourite_properties),
-    path('add-property', add_property),
+    #path('add-property', add_property),
 
 
     path('properties-grid', properties_grid),
