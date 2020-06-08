@@ -295,27 +295,28 @@
                             <div class="property-item">
                                 <div class="property--img">
                                     <a href="property-single-gallery.html">
-                                        <img src="/media/{{ post.photo}}" alt="property image"
+                                        <img src="/media/{{ post.photo }}" alt="property image"
                                              class="img-responsive">
                                     </a>
-                                    <span class="property--status">For Sale</span>
+                                    <span class="property--status">{{ post.status }}</span>
                                 </div>
                                 <div class="property--content">
                                     <div class="property--info">
-                                        <h5 class="property--title"><a href="property-single-gallery.html">House in Kent
-                                            Street</a></h5>
-                                        <p class="property--location">127 Kent Street, Sydney, NSW 2000</p>
-                                        <p class="property--price">$130,000</p>
+                                        <h5 class="property--title"><a href="property-single-gallery.html">{{ post.name }} - {{ post.city }} </a></h5>
+                                        <p class="property--location">Address: {{ post.address }}</p>
+                                        <p class="property--location">Square: {{ post.size }} m2</p>
+                                        <p class="property--price">Price: ${{ post.price }}</p>
                                     </div>
                                     <!-- .property-info end -->
                                 </div>
                             </div>
                         </div>
                         <!-- .property item end -->
+
+
+
+                    </div>
                     {% endfor %}
-
-
-                </div>
 
 
 

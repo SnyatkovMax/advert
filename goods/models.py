@@ -38,6 +38,7 @@ class Country(models.Model):
 
 class Post(models.Model):
     name = models.CharField(max_length=100, unique=False, null=False)
+    price = models.PositiveIntegerField(null=True, default=0)
     description = models.CharField(max_length=500, unique=False, null=False)
     beds = models.PositiveIntegerField(null=True, default=0)
     baths = models.PositiveIntegerField(null=True, default=0)
@@ -55,7 +56,8 @@ class Post(models.Model):
     status = models.ForeignKey(Status, on_delete=models.CASCADE)
     location = models.ForeignKey(Location, on_delete=models.CASCADE)
 
+
     def __str__(self):
-        return f'{self.name} / {self.type} / {self.status} / {self.location} / {self.beds} / {self.baths} / ' \
+        return f'{self.name} / {self.price} / {self.type} / {self.status} / {self.location} / {self.beds} / {self.baths} / ' \
                f'{self.floors} / {self.metro} / {self.area} / {self.size} / {self.address} / {self.city} / ' \
                f'{self.country}'

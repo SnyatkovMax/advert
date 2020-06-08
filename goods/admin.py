@@ -29,5 +29,5 @@ class CityAdmin(admin.ModelAdmin):
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'type', 'status', 'location', 'beds', 'baths', 'floors', 'metro', 'area', 'size',
+    list_display = ( 'name', 'id', 'price','type', 'status', 'location', 'beds', 'baths', 'floors', 'metro', 'area', 'size',
                     'address', 'city', 'country')
